@@ -1,58 +1,16 @@
 /* Estilos generales para la app */
 .app {
-  display: flex; /* Usamos Flexbox para disposición horizontal */
-  height: 100vh; /* Asegura que la altura de la app ocupe toda la pantalla */
-  padding: 30px;
-  flex-direction: row;
-  column-gap: 30px;
-}
-
-/* Estilo para el menú (barra de navegación) */
-.menu {
-  width: 15%; /* El menú ocupará el 20% del ancho */
-  background-color: #2c3e50; /* Color de fondo oscuro para el menú */
-  padding: 20px;
-  box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para el borde derecho */
-  // height: 100vh; /* La altura ocupa toda la pantalla */
-  // position: fixed; /* Fija el menú en el lado izquierdo */
-  top: 0; /* Alineado a la parte superior */
-  left: 0; /* Alineado a la parte izquierda */
-  border-radius: 8px;
-}
-
-/* Estilo para los enlaces en el menú */
-.menu ul {
-  list-style: none; /* Elimina los puntos de la lista */
-  padding: 0;
-  margin: 0;
+  height: 100vh;
   display: flex;
-  flex-direction: column; /* Alineación vertical de los enlaces */
-  row-gap: 20px;
-}
-
-.menu a {
-  color: #ecf0f1; /* Color blanco para los enlaces */
-  text-decoration: none; /* Elimina el subrayado */
-  font-size: 16px;
-  font-weight: 500;
-  padding: 10px;
-  margin: 5px 0; /* Espaciado entre enlaces */
-  border-radius: 5px; /* Bordes redondeados en los enlaces */
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Efecto hover en los enlaces */
-.menu a:hover {
-  background-color: #3498db; /* Fondo azul claro en hover */
-  color: #fff; /* Texto blanco en hover */
+  flex-direction: row;
 }
 
 /* Estilo para el contenedor de contenido */
 .container {
-  // margin-left: 27%; /* Deja espacio para el menú (20% de ancho) */
+  height: -webkit-fill-available;
+  width: 100%;
   padding: 20px;
   background-color: #ecf0f1; /* Fondo claro para el contenido */
   overflow-y: auto; /* Permite el desplazamiento vertical del contenido si es necesario */
-  border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para el contenido */
 }

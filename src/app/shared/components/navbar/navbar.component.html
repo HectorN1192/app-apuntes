@@ -1,0 +1,9 @@
+<nav class="navbar">
+  <ul>
+    @for(route of routes(); track route) {
+    <li>
+      <a [routerLink]="route.path"> {{ route.data?.['title'] }}</a>
+    </li>
+    }
+  </ul>
+</nav>

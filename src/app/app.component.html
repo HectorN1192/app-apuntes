@@ -1,13 +1,5 @@
 <section class="app">
-  <nav class="menu">
-    <ul>
-      @for(route of routes(); track route) {
-      <li>
-        <a [routerLink]="route.path"> {{ route.data?.['title'] }}</a>
-      </li>
-      }
-    </ul>
-  </nav>
+  <app-navbar></app-navbar>
   <section class="container">
     <router-outlet />
   </section>
