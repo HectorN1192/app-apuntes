@@ -12,28 +12,8 @@
 
 <h2>Componentes y Templates</h2>
 
-<h3>Ciclo de vida de los componentes:</h3>
-
-<ol>
-  <li>Inicialización del componente.</li>
-  <li>ngOnChanges: Responde a cambios en las</li>
-  <li>propiedades de entrada.</li>
-  <li>ngDoCheck: Detecta cambios manuales.</li>
-  <li>
-    ngAfterContentInit: Ejecutado después de que el contenido proyectado sea
-    inicializado.
-  </li>
-  <li>
-    ngAfterContentChecked: Llamado después de verificar el contenido proyectado.
-  </li>
-  <li>
-    ngAfterViewInit: Llamado después de inicializar las vistas del componente.
-  </li>
-  <li>
-    ngAfterViewChecked: Llamado después de verificar las vistas del componente.
-  </li>
-  <li>ngOnDestroy: Limpieza de recursos.</li>
-</ol>
+<h3>{{ "component.lifecycle.title" | translate }}</h3>
+<span [innerHTML]="'component.lifecycle.content' | translate"></span>
 
 <h3>Creación y estructuración:</h3>
 
@@ -49,9 +29,8 @@
 
 Creación de directivas personalizadas con decorador Directive.
 
-<h2></h2>
-Binding de datos Interpolación: variable. Property binding: [property]="value".
-Event binding: (event)="handler()". Two-way binding: [(ngModel)]="variable".
+<h2>{{ "component.binding.title" | translate }}</h2>
+<span [innerHTML]="'component.binding.content' | translate"></span>
 
 <h2>Pipes</h2>
 

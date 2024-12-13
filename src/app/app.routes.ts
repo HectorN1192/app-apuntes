@@ -20,6 +20,15 @@ export const routes: Routes = [
     },
   },
   {
+    path: 'Translate',
+    title: 'Translate',
+    loadComponent: () => import('./pages/translate/translate.component'),
+    data: {
+      title: 'Translate',
+      icon: 'language',
+    },
+  },
+  {
     path: '**',
     pathMatch: 'full',
     redirectTo: 'init',

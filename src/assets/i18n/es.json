@@ -1,0 +1,25 @@
+{
+  "home": "Inicio",
+  "component": {
+    "lifecycle": {
+      "title": "Ciclo de vida de los componentes",
+      "content": "<ol><li>ngOnInit: Inicialización del componente.</li><li>ngOnChanges: Responde a cambios en las propiedades de entrada.</li><li>ngDoCheck: Detecta cambios manuales.</li><li>ngAfterContentInit: Ejecutado después de que el contenido proyectado sea inicializado.</li><li>ngAfterContentChecked: Llamado después de verificar el contenido proyectado.</li><li>ngAfterViewInit: Llamado después de inicializar las vistas del componente.</li><li>ngAfterViewChecked: Llamado después de verificar las vistas del componente.</li><li>ngOnDestroy: Limpieza de recursos.</li></ol>"
+    },
+    "binding": {
+      "title": "Binding de datos Interpolación",
+      "content": "<ul><li>Interpolación: {{variable}}.</li><li>Property binding: [property]=&#34;value&#34;.</li><li>Event binding: (event)=&#34;handler()&#34;.</li><li>Two-way binding: [(ngModel)]=&#34;variable&#34;.</li></ul>"
+    }
+  },
+  "translation": {
+    "title": "Traducción",
+    "description": "Vamos a crear un fichero de traducciones, no sirve solo para hacer que la aplicacion pueda ser traducida, sino tambien para mantener todos los textos en un solo lugar.",
+    "step1_title": "Paso 1. Instalacion de ngx-translate",
+    "step1_description": "instale ngx-translate y sus dependencias. ngx-translate consta de dos paquetes principales: @ngx-translate/corepara la funcionalidad principal y @ngx-translate/http-loaderpara cargar traducciones a través de solicitudes HTTP.",
+    "install": "npm install @ngx-translate/core @ngx-translate/http-loader --save",
+    "step2_title": "Paso 2. Configurar ngx-translate con app.config",
+    "step2_description": "Configure ngx-translate para app.configcargar archivos de traducción desde assets/i18n/",
+    "step2_code": "import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';\nimport { HttpClient, provideHttpClient, withFetch } from '@angular/common/http';\nimport { TranslateHttpLoader } from '@ngx-translate/http-loader';\nimport { TranslateLoader, TranslateModule } from '@ngx-translate/core';\n\nexport function HttpLoaderFactory(http: HttpClient) {\n  return new TranslateHttpLoader(http, './assets/i18n/', '.json');\n}\n\nexport const appConfig: ApplicationConfig = {\n  providers: [\n    ...\n    importProvidersFrom(\n      TranslateModule.forRoot({\n        loader: {\n          provide: TranslateLoader,\n          useFactory: HttpLoaderFactory,\n          deps: [HttpClient]\n        }\n      })\n    )\n  ]\n};",
+    "step3_title": "Paso 3. Crear archivos de traducción",
+    "step3_description": "Cree archivos JSON separados ( en.json, de.json, etc.) en el assets/i18n/directorio para cada idioma que desee admitir."
+  }
+}
